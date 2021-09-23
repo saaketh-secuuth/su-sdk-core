@@ -1,7 +1,7 @@
-import { getProfile, renewTokens } from "./API";
-import SecAuthentication from "./Authentication";
-import { generateCodeChallenge, generateKeys, timer } from "./Utilities";
-import { CSSURL, HOST } from "./constants";
+import { getProfile, renewTokens } from "./src/API";
+import SecAuthentication from "./src/Authentication";
+import { generateCodeChallenge, generateKeys, timer } from "./src/Utilities";
+import { CSSURL, HOST } from "./src/constants";
 
 export {
   getProfile,
