@@ -22,4 +22,4 @@ const renewTokens = (keyId, refreshToken) => {
   }
 };
 
-export { getProfile };
+export { getProfile, renewTokens };

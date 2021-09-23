@@ -1,6 +1,5 @@
-import { getProfile } from "./API";
 import { HOST } from "./constants";
-import { generateKeys, timer, generateCodeChallenge } from "./Utilities";
+import { generateKeys, timer } from "./Utilities";
 
 export default class SecAuthentication {
   constructor(keyId, profileName) {
