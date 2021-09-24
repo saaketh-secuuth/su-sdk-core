@@ -7,7 +7,7 @@ export default class SecAuthentication {
     this.keyId = keyId;
   }
 
-  getTokens = async (initAuthResp, authCode, profile, codeVerifier) => {
+  async getTokens(initAuthResp, authCode, profile, codeVerifier) {
     const { signInMode } = profile;
 
     let bodyData = {
@@ -28,9 +28,9 @@ export default class SecAuthentication {
       body: JSON.stringify(bodyData),
     });
     return resp.json();
-  };
+  }
 
-  verifyAuth = async ({ userId, challengeId, challenge }) => {
+  async verifyAuth({ userId, challengeId, challenge }) {
     const bodyData = {
       userId,
       challengeId,
@@ -56,9 +56,9 @@ export default class SecAuthentication {
       }
     }
     return verifyResp;
-  };
+  }
 
-  initiateAuth = async (email, profile, hash) => {
+  async initiateAuth(email, profile, hash) {
     let publicKey, privateKey;
 
     let keys = await generateKeys();
@@ -94,5 +94,5 @@ export default class SecAuthentication {
       console.log(err);
       throw err;
     }
-  };
+  }
 }
